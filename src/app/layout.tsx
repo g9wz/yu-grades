@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "No shenanigans, just your grades out of 100!",
 };
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +30,7 @@ export default function RootLayout({
             {children}
           </GradesProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
